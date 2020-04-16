@@ -1,4 +1,4 @@
-'''from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse
 import json
 
 # JSON形式传参（前端传递参数的最后一种方式）
@@ -102,7 +102,7 @@ def session_get(request):
     print(value)
 
     return HttpResponse(value)
-'''
+
 from django.http import HttpResponse
 from django.views.generic import View
 

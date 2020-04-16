@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'day01',
     'day01xiawu',
     'day02',
+    'day03',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'day03.middleware.my_middleware',
 ]
 
 ROOT_URLCONF = 'homework.urls'
@@ -78,8 +80,12 @@ WSGI_APPLICATION = 'homework.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST':'127.0.0.1',
+        'PORT':3306,
+        'USER':'root',
+        'PASSWORD':'mysql',
+        'NAME': 'my_homework',
     }
 }
 
